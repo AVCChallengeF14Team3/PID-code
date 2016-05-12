@@ -1,2 +1,2 @@
 # PID-code
-Some dode for calculating the PID readings
+Some code for calculating the PID readings
