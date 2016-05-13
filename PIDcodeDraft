@@ -11,25 +11,24 @@ double kp, ki, kd;
 
 void Compute()
 {
-  unsigned long currentTime = millis;
-  double timeChange = (currentTime-lastTime);
+    unsigned long currentTime = millis;
+    double timeChange = (currentTime-lastTime);
    
-  //this calculates the integral component
-  errorSum += (error*timeChange);
+    //this calculates the integral component
+    errorSum += (error*timeChange);
   
-  //calculating the derivative component
-  double dError = (error - lastError)/timeChange
+    //calculating the derivative component
+    double dError = (error - lastError)/timeChange
   
-  //computing the PID output
-  pidOutput = kp*error + ki*errorSum + kd*dError;
-  
-  //this bit remembers the variables we just used
-  lastError = error;
-  lastTime = currentTime;
+    //computing the PID output
+    pidOutput = kp*error + ki*errorSum + kd*dError;
+    //this bit remembers the variables we just used
+    lastError = error;
+    lastTime = currentTime;
 }
 
 void setConstants(){
-  kp = (INSERT CONSTANT HERE);
-  ki = (INSERT CONSTANT HERE);
-  kd = (INSERT CONSTANT HERE);
+    kp = (INSERT CONSTANT HERE);
+    ki = (INSERT CONSTANT HERE);
+    kd = (INSERT CONSTANT HERE);
 }
